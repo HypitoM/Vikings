@@ -61,12 +61,15 @@ ul{
     transform: rotate(180deg);
 }
 
+.menu{
+    background: linear-gradient(180deg, #0E0E0E 0%,
+    rgba(17, 17, 17, 0.850295) 16.53%, rgba(32, 31, 33, 0) 100%);
+    padding: 50px 0 58px;
+}
+
 .menu__list{
     display: flex;
     justify-content: center;
-    padding: 50px 0 58px;
-    background: linear-gradient(180deg, #111213 0%, #111213 43.62%,
-    rgba(32, 31, 33, 0) 86.33%);
 }
 
 .menu__list-item{
@@ -155,7 +158,8 @@ ul{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 100px 75px;
-    counter-reset: counter;
+    counter-reset: number;
+    padding-top: 50px;
 }
 
 .seasons__item{
@@ -267,6 +271,17 @@ ul{
     background-size: cover;
     background-position: center center;
     position: relative;
+}
+
+.menu__container{
+    max-width: 1385px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.page-logo{
+    position: absolute;
+    left: 0;
 }
 
 .season-info{
