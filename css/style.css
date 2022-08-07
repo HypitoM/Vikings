@@ -149,3 +149,110 @@ ul{
     left: 0;
     background-image: url('../images/youtube.svg');
 }
+
+.seasons__inner{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 100px 75px;
+    counter-reset: counter;
+}
+
+.seasons__item{
+    width: 350px;
+    height: 250px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.seasons__item:hover .seasons__link{
+    opacity: 1;
+}
+
+.seasons__item:hover::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(14, 14, 14, 0.8);
+}
+
+.seasons__item::before{
+    content: '0' counter(counter);
+    counter-increment: counter;
+    position: absolute;
+    font-weight: bold;
+    font-size: 96px;
+    line-height: 112px;
+    color: #600e09;
+    left: 0;
+    top: -72px;
+    z-index: -1;
+}
+
+.seasons__link{
+    font-size: 36px;
+    line-height: 42px;
+    padding: 12px 78px 11px;
+    background-color: #0E0E0E;
+    opacity: 0;
+    transition: all, 0.3s;
+    z-index: 2;
+}
+
+.heroes__inner{
+    display: flex;
+    justify-content: space-between;
+}
+
+.heroes__slider-img{
+    max-width: 775px;
+}
+
+.heroes__slider-text{
+    max-width: 350px;
+}
+
+.slick-btn{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background-color: transparent;
+    z-index: 5;
+    cursor: pointer;
+    outline: none;
+}
+
+.slick-prev{
+    left: 38px;
+}
+
+.slick-next{
+    right: 38px;
+}
+
+.heroes__name{
+    font-weight: 300;
+    font-size: 72px;
+    line-height: 84px;
+    margin-bottom: 44px;
+    font-style: italic;
+    color: #85CCDC;
+}
+
+.heroes__text p{
+    margin-bottom: 15px;
+}
+
+.copy{
+    padding: 14px 0 15px;
+    text-align: center;
+}
