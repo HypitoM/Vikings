@@ -190,8 +190,8 @@ ul{
 }
 
 .seasons__item::before{
-    content: '0' counter(counter);
-    counter-increment: counter;
+    content: '0' counter(number);
+    counter-increment: number;
     position: absolute;
     font-weight: bold;
     font-size: 96px;
